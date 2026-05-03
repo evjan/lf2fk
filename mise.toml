@@ -1,0 +1,30 @@
+[tools]
+node = "24"
+
+[tasks.install]
+description = 'Installs deps'
+run = 'npm install'
+
+[tasks.dev]
+description = 'Run dev env'
+run = 'npm run dev'
+depends = ['install']
+
+[tasks.build]
+description = 'Build the project for production'
+run = 'npm run build'
+depends = ['install']
+
+[tasks.preview]
+description = 'Preview the build locally'
+run = 'npm run preview'
+depends = ['install']
+
+[tasks.deploy]
+description = 'Deploy to Cloudflare Workers'
+run = 'npm run deploy'
+depends = ['build']
+
+[tasks.tail]
+description = 'Monitor your workers'
+run = 'npx wrangler tail'
