@@ -5,14 +5,15 @@ import { convertFile } from "./convert";
 
 function App() {
 
-	const onChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+	const onChange: React.ChangeEventHandler<HTMLInputElement> = async (e) => {
 		const file = e.target.files?.[0];
 		if (!file) {
 			alert("No file!");
 			return;
 		}
 
-		convertFile(file);
+		let output = await convertFile(file);
+		alert(output);
 		e.currentTarget.value = "";
 	}
 
