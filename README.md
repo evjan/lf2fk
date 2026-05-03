@@ -33,7 +33,7 @@ mise run preview
 Deploy your project to Cloudflare Workers:
 
 ```bash
-mise run build && mise run deploy
+mise run deploy
 ```
 
 Monitor your workers:
