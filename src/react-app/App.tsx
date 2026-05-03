@@ -13,7 +13,12 @@ function App() {
 		}
 
 		let output = await convertFile(file);
-		alert(output);
+		const url = URL.createObjectURL(output);
+		const a = document.createElement("a");
+		a.href = url;
+		a.download = output.name;
+		a.click();
+		URL.revokeObjectURL(url);
 		e.currentTarget.value = "";
 	}
 
