@@ -13,7 +13,6 @@
 	},
 	"dependencies": {
 		"hono": "^4.12.16",
-		"papaparse": "^5.5.3",
 		"react": "19.2.1",
 		"react-dom": "19.2.1"
 	},

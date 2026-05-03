@@ -25,9 +25,9 @@ function App() {
 	return (
 		<>
 			<h1>LF2FK</h1>
-			<div>
+			<div>Konvertera CSVs från Länsförsäkringar till Fortnox-format</div>
+			<div className="card">
 				<label>
-					Upload CSV
 					<input type="file" accept=".csv,text/csv" onChange={onChange} />
 				</label>
 			</div>
